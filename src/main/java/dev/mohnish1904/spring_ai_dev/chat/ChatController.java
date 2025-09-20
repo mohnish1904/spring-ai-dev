@@ -18,7 +18,7 @@ public class ChatController {
 
     //blocking call
     @GetMapping("/chat")
-    public String chat(){
+    public String chat() {
         return chatClient.prompt()
                 .user("tell me an interesting fact about AI in 3 lines.")
                 .call()
