@@ -17,9 +17,11 @@ public class ReviewService {
     }
 
     public Sentiment classifySentiment(String review) {
-        String systemPrompt = """
+        String systemPrompt =
+                """
                 Classify the sentiment of the following text as POSITIVE, NEGATIVE, or NEUTRAL. \
-                Your response must be only one of these three words.""";
+                Your response must be only one of these three words.
+                """;
 
         return chatClient.prompt()
                 .system(systemPrompt)
